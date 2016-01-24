@@ -5,5 +5,5 @@ Comment=Soundnode App is the Soundcloud for desktop.
 Exec=/opt/soundnode/Soundnode-App
 Icon=/opt/soundnode/soundnode.png
 Terminal=false
-Categories=Multimedia
+Categories=Audio
 Type=Application
