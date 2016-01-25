@@ -25,8 +25,8 @@ source=("https://raw.githubusercontent.com/Soundnode/soundnode-app/0.6.1/app/sou
 sha256sums_x86_64=('9cdec26938b3463568f14566f698c619d72c2dff66fc858079df1a89c970527d')
 
 # Generic checksums.
-#sha256sums=('aaae33882ab1e2334b4a33b4235cbdd4beb1379b08f5fa3a0a270f716ea43fa7'
-#'ce386ef34305923a3d10567be4e90963f0186852f8d5fe99f324dbfc487a2e6f')
+sha256sums=('aaae33882ab1e2334b4a33b4235cbdd4beb1379b08f5fa3a0a270f716ea43fa7'
+'ce386ef34305923a3d10567be4e90963f0186852f8d5fe99f324dbfc487a2e6f')
 
 package() {
         install -d -m 755 ${pkgdir}/opt/
