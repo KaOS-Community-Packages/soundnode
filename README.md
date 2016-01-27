@@ -2,3 +2,6 @@
 Soundcloud client for the desktop
 
 http://www.soundnodeapp.com/
+
+install:
+kcp -i soundnode
