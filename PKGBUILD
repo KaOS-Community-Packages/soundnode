@@ -1,32 +1,23 @@
 pkgname=soundnode
-pkgver=0.6.1
+pkgver=0.6.2
 pkgrel=1
 pkgdesc="Soundcloud client for the desktop"
 arch=('x86_64')
 url="http://www.soundnodeapp.com/"
 license=('GPL3')
-
-# Required, otherwise it won't run.
 options=('!strip')
-
 makedepends=()
 depends=()
 optdepends=()
-
 # I couldn't figure out how to build it properly and the website has no per-release
 # archives. The SHA256sums will fail if it updates; that should be an indication that
 # this package has become out of date.
-source_x86_64=("http://www.soundnodeapp.com/downloads/linux64/Soundnode-App.zip")
-
-# Generic sources.
-source=("https://raw.githubusercontent.com/Soundnode/soundnode-app/0.6.1/app/soundnode.png"
-"soundnode-app.desktop")
-
-sha256sums_x86_64=('9cdec26938b3463568f14566f698c619d72c2dff66fc858079df1a89c970527d')
-
-# Generic checksums.
-sha256sums=('aaae33882ab1e2334b4a33b4235cbdd4beb1379b08f5fa3a0a270f716ea43fa7'
-'d4b4e8825ab3770d93358d6dd7aefbbabcfccf51392535fdb3fb640c962b78e6')
+source=("http://www.soundnodeapp.com/downloads/linux64/Soundnode-App.zip"
+        "https://raw.githubusercontent.com/Soundnode/soundnode-app/0.6.2/app/soundnode.png"
+        "soundnode-app.desktop")
+sha256sums=('e3d6b88150d286645553f803edd6163e53e967415fa9e38d7bbbf9f9182f7a7a'
+            'aaae33882ab1e2334b4a33b4235cbdd4beb1379b08f5fa3a0a270f716ea43fa7'
+            'd4b4e8825ab3770d93358d6dd7aefbbabcfccf51392535fdb3fb640c962b78e6')
 
 package() {
         install -d -m 755 ${pkgdir}/opt/
