@@ -6,7 +6,6 @@ arch=('x86_64')
 url="http://www.soundnodeapp.com/"
 license=('GPL3')
 depends=('gconf')
-options=('!strip')
 source=("http://www.soundnodeapp.com/downloads/linux64/Soundnode-App.zip"
         "https://raw.githubusercontent.com/Soundnode/soundnode-app/0.6.2/app/soundnode.png"
         "soundnode-app.desktop")
@@ -17,11 +16,8 @@ sha256sums=('e3d6b88150d286645553f803edd6163e53e967415fa9e38d7bbbf9f9182f7a7a'
 package() {
         install -d -m 755 ${pkgdir}/opt/
         install -d -m 755 ${pkgdir}/usr/share/applications/
-
-
         install -D -m 644 ${srcdir}/soundnode-app.desktop ${pkgdir}/usr/share/applications/
-
         rm ${srcdir}/Soundnode-App.zip
         rm ${srcdir}/soundnode-app.desktop
-	    cp -Lr ${srcdir} $pkgdir/opt/${pkgname}
+        cp -Lr ${srcdir} $pkgdir/opt/${pkgname}
 }
