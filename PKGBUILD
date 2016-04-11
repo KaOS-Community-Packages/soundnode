@@ -6,6 +6,7 @@ arch=('x86_64')
 url="http://www.soundnodeapp.com/"
 license=('GPL3')
 depends=('gconf' 'gtk2' 'libxtst' 'nss' 'alsa-lib' 'libnotify' 'fontconfig')
+options=('!strip')
 source=("http://www.soundnodeapp.com/downloads/linux64/Soundnode-App.zip"
         "https://raw.githubusercontent.com/Soundnode/soundnode-app/0.6.4/app/soundnode.png"
         "soundnode-app.desktop")
