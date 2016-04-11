@@ -8,7 +8,8 @@ license=('GPL3')
 depends=('gconf' 'gtk2' 'libxtst' 'nss' 'alsa-lib' 'libnotify' 'fontconfig')
 options=('!strip')
 source=("http://www.soundnodeapp.com/downloads/linux64/Soundnode-App.zip"
-        "https://raw.githubusercontent.com/Soundnode/soundnode-app/0.6.4/app/soundnode.png"
+        "https://raw.githubusercontent.com/Soundnode/soundnode-app/0.6.2/app/soundnode.png"
+
         "soundnode-app.desktop")
 options=("!strip")
 sha256sums=('2b0dbdb6a59546472f9621b25be1b29aa60c22c3f8e692940dad698de85aa432'
