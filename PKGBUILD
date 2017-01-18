@@ -6,10 +6,8 @@ arch=('x86_64')
 url="http://www.soundnodeapp.com/"
 license=('GPL3')
 depends=('gconf' 'gtk2' 'libxtst' 'nss' 'alsa-lib' 'libnotify' 'fontconfig')
-options=('!strip')
 source=("http://www.soundnodeapp.com/downloads/linux64/Soundnode.zip"
         "https://raw.githubusercontent.com/Soundnode/soundnode-app/0.6.2/app/soundnode.png"
-
         "soundnode-app.desktop")
 options=("!strip")
 sha256sums=('ecf085044347a4b35ea4c558ab65296edd8c107f84f88fb5e88e5b72454475c1'
@@ -23,8 +21,9 @@ package() {
         ln -s /opt/soundnode/Soundnode $pkgdir/usr/bin/soundnode
         install -dm755 $pkgdir/usr/share/applications/
         install -Dm644 "$srcdir"/soundnode-app.desktop "$pkgdir"/usr/share/applications/
-        install -d -m 755 $pkgdir/usr/share/pixmaps
-        ln -s  /opt/$pkgname/$pkgname.png   $pkgdir/usr/share/pixmaps/$pkgname.png
+        ## the size could be wrong but still should be fine like this
+        install -d -m 755 "$pkgdir"/usr/share/icons/hicolor/32x32/apps
+        ln -s  /opt/$pkgname/$pkgname.png   $pkgdir/usr/share/icons/hicolor/32x32/apps/$pkgname.png
 
         rm $pkgdir/opt/$pkgname/{soundnode-app.desktop,Soundnode.zip}
         }
