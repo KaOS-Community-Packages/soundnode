@@ -12,7 +12,7 @@ source=("http://www.soundnodeapp.com/downloads/linux64/Soundnode.zip"
 options=("!strip")
 sha256sums=('ecf085044347a4b35ea4c558ab65296edd8c107f84f88fb5e88e5b72454475c1'
             'aaae33882ab1e2334b4a33b4235cbdd4beb1379b08f5fa3a0a270f716ea43fa7'
-            '3ef95758b2eb2e85b8666b48786f4f7f440fcc9efd170efcff9aec84e79f0427')
+            '219d6a7a35db7ca0aef8b86210c28ef4f1ff0ddf5823669c68410218163c5316')
 
 package() {
         install -d -m 755 $pkgdir/opt/
